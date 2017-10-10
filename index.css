@@ -29,7 +29,33 @@
 .intro-person {
   background: rgba(0, 0, 0, 0.2);
   padding: 30px;
-  
+}
+
+.intro-person > .person-main {
+  width: 100px;
+  height: 100px;
+  background: rgba(0,0,0,.1);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.intro-person > .person-main > span:first-child {
+  font-size: 18px;
+  letter-spacing: .5em;
+  line-height: 1;
+  padding-left: 10px;
+}
+
+.intro-person > .person-main > span:last-child {
+  letter-spacing: .5em;
+  font-size: 12px;
+  line-height: 3;
+  padding-left: 10px;
 }
 
 .intro-person .sp2 {
@@ -58,27 +84,31 @@
 }
 
 .items-projects h3,
-.items-skills h3 {
+.items-skills h3,
+.items-open h3 {
   margin-bottom: 26px;
   border-bottom: 2px solid black;
 }
 
 .items-projects .obj,
-.items-skills .skill {
+.items-skills .skill,
+.items-open .open {
   margin-left: 8px;
   position: relative;
   border-left: 2px solid black;
 }
 
 .obj > li,
-.skill > li {
+.skill > li,
+.open > li {
   margin: 0 0 30px 30px;
   position: relative;
   top: -6px;
 }
 
 .obj > li > .dot,
-.skill > li > .dot {
+.skill > li > .dot,
+.open > li > .dot {
   width: 10px;
   height: 10px;
   background: black;
@@ -89,17 +119,20 @@
 }
 
 .obj > li > h4,
-.skill > li > h4 {
+.skill > li > h4,
+.open > li > h4 {
   margin-bottom: 10px;
 }
 
 .obj > li > p,
-.skill > li > p {
+.skill > li > p,
+.open > li > p {
   margin-top: 11px;
   color: #545E6C;
 }
 
-.obj > li > h4 > a {
+.obj > li > h4 > a,
+.open > li > h4 > a {
   margin-left: 30px;
   border: 1px solid black;
   border-radius: 5px;
@@ -108,10 +141,20 @@
   font-size: 12px;
 }
 
-.obj > li > h4 > a:hover {
+.obj > li > h4 > a:hover,
+.open > li > h4 > a:hover {
   color: pink;
 }
 
-@media (min-width:700px) {
+@media (max-width:700px) {
+  .wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 400px;
+  }
 
+  .introduce {
+    width: 100%;
+    text-align: center;
+  }
 }
